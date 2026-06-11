@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>제1장 : 이곳은 마법학교</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'맑은 고딕', sans-serif;
+    background:#f5f7fa;
+}
+
+/* 공통 */
+
+.scene{
+    display:none;
+    min-height:100vh;
+    padding:40px;
+    animation:fade .5s ease;
+}
+
+.scene.active{
+    display:block;
+}
+
+.story-box{
+    max-width:1000px;
+    margin:auto;
+
+    background:rgba(255,255,255,.95);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+/* 입학식 */
+
+.school{
+    background:linear-gradient(
+        180deg,
+        #8fd3ff,
+        #dff4ff
+    );
+}
+
+/* 훈련장 */
+
+.training{
+    background:linear-gradient(
+        180deg,
+        #8fd694,
+        #e7ffd9
+    );
+}
+
+/* 마왕성 */
+
+.castle{
+    background:linear-gradient(
+        180deg,
+        #2b2d42,
+        #4a4e69,
+        #6c63ff
+    );
+}
+
+/* 고블린 전투 */
+
+.battle{
+    background:linear-gradient(
+        180deg,
+        #355c3a,
+        #5d8a62,
+        #92c98d
+    );
+}
+
+/* 교무실 */
+
+.office{
+    background:linear-gradient(
+        180deg,
+        #d9c5a1,
+        #efe1c6,
+        #fff6e7
+    );
+}
+
+/* 재희 집 */
+
+.room{
+    background:linear-gradient(
+        180deg,
+        #ffd6e7,
+        #ffe7f1,
+        #fff8fc
+    );
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+
+p{
+    line-height:1.9;
+    margin:12px 0;
+    color:#222;
+}
+
+b{
+    color:#2d4fff;
+}
+
+button{
+    margin-top:30px;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#5c7cfa;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+hr{
+    margin:20px 0;
+    border:none;
+    border-top:2px solid #ddd;
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- 장면1 -->
+
+<section class="scene active school">
+
+<div class="story-box">
+
+<h1>제1장 : 이곳은 마법학교</h1>
+
+<p>
+이곳은 마법학교 평법하게 보이는 이곳은 사실 마법으로 빌런을 처리하는 곳으로 국가에서만든 비밀조직이다
+난 평범한 어머니 그리고 한떄 영웅 이였던 아버지사이에서 태어난 아이
+오늘 마법학교 입학식이다
+그렇게 학교에들어간다....
+</p>
+
+<br>
+
+<p>
+<b>세라 :</b>
+다들 조용 오늘부터 너희들 담임을 맞게된 세라 라고한다
+다들자기소개 먼져 주이안 부터 한재희 까지
+</p>
+
+<br>
+
+<p><b>주이안 :</b> (귀찮) 나는 이안이고 그냥 불 바람 쓰는 법사야</p>
+
+<p><b>델리아 :</b> 나는 델리아 라고해 ㅋ 뭐 그냥 계악능력자야~!</p>
+
+<p><b>송하림 :</b> 안녕..난 하림이고 검술할줄아러..</p>
+
+<p><b>베르타 :</b> 난 베르타고 능력은 그냥 사람살작조종할수있어....자..잘부탁해..(소심한척)</p>
+
+<p><b>정시온 :</b> 난 정시온이고 활을 잘써!</p>
+
+<p><b>한재희 :</b> (다들 멋지능력이넹...) 안녕 다들 난 제희이고 버프랑 디버프를 다뤄 다들잘부탁해~!!</p>
+
+<br>
+
+<p>
+<b>세라 :</b>
+다들 친하게지내라
+오늘은 서로찬해지는시간이다
+수업은 크게없어
+</p>
+
+<br><br>
+
+<p><b>한재희 :</b> 이안 안녕 능력 멋있더라~</p>
+
+<p><b>주이안 :</b> 꺼져 귀찮게 하지말고</p>
+
+<p><b>송하림 :</b> 아잇 또 그런다 재희야 좀 이해 해줘 워낙 저런애라서</p>
+
+<p><b>한재희 :</b> 으..응 우리 훈련장가서 능력 써보자!!</p>
+
+<p><b>주이안 :</b> 귀찮아 안가</p>
+
+<p><b>한재희 :</b> 아아아아아 가자 빨리아아아</p>
+
+<p><b>송하림 :</b> 그래...가자 연습도해야지 (이안을 끌고가며)</p>
+
+<button onclick="nextScene()">
+훈련장 ▶
+</button>
+
+</div>
+
+</section>
+
+<!-- 장면 2 : 훈련장 -->
+
+<section class="scene training">
+
+    <div class="story-box">
+    
+    <h1>훈련장</h1>
+    
+    <p style="text-align:center;">
+    -------
+    </p>
+    
+    <p style="text-align:center;">
+    훈련장도착
+    </p>
+    
+    <p style="text-align:center;">
+    --------
+    </p>
+    
+    <p><b>한재희 :</b> 이안 부터 써봐</p>
+    
+    <p><b>주이안 :</b> "파이어볼"</p>
+    
+    <p><b>한재희 :</b> 오!! 강하다 다음 은 하림이</p>
+    
+    <p><b>송하림 :</b> "삼연참"</p>
+    
+    <p><b>주이안 :</b> 너도써봐 재희야...</p>
+    
+    <p><b>한재희 :</b> 으...응</p>
+    
+    <p><b>한재희 :</b> "마나회복"</p>
+    
+    <p><b>송하림 :</b> 어? 마나가 회복됬어?</p>
+    
+    <p><b>주이안 :</b> 나쁘진 않네....</p>
+    
+    <p><b>한재희 :</b> 근데 이안 너능력하나 더있잖아...</p>
+    
+    <p><b>주이안 :</b> "윈드 실드"</p>
+    
+    <p><b>한재희 :</b> 바람으로 방어막을...대단해!</p>
+    
+    <p><b>한재희 :</b> 근데 나머지애들은..어디간거지? 다른애들도 보고싶은데....</p>
+    
+    <p><b>주이안 :</b> 귀찮아 간다</p>
+    
+    <p><b>송하림 :</b> 아잇 쫌 같히가(따라가며)</p>
+    
+    <p><b>한재희 :</b> 아...야 나도....같히가아 (따라가며)</p>
+    
+    <br>
+    
+    <p>(그떄)</p>
+    
+    <br>
+    
+    <p><b>델리아 :</b> 하..ㅋㅋ 재밌네...그아이들..보고를들여야겠지</p>
+    
+    <button onclick="nextScene()">
+    마왕성 ▶
+    </button>
+    
+    </div>
+    
+    </section>
+
+
+<!-- 장면 3 : 마왕성 -->
+
+<section class="scene castle">
+
+    <div class="story-box">
+    
+    <h1>마왕성</h1>
+    
+    <p style="text-align:center;">
+    -----
+    </p>
+    
+    <p style="text-align:center;">
+    (마왕성)
+    </p>
+    
+    <br>
+    
+    <p><b>??? :</b> .....뭐지 왜 찾아 왔는가</p>
+    
+    <p><b>델리아 :</b> 아 그게~ 말할꺼있어~</p>
+    
+    <p><b>??? :</b> 여기서는 존칭쓰지? 암튼 뭐지</p>
+    
+    <p><b>델리아 :</b> 이번에 들어온 신입생들 만만치 않던데 우리 그날 조금 위험할지도?</p>
+    
+    <p><b>??? :</b> ......</p>
+    
+    <p><b>베르타 :</b> 맞습니다...아니면 제가조용히 처리를...</p>
+    
+    <p><b>??? :</b> 아니 그럴필요 없어 이미 고블린3마리를 보냈어 중급 마물이니 충분하겠지</p>
+    
+    <p><b>델리아 :</b> 잔인하시네..1학년 상대로 그정도 마물을 보내시고</p>
+    
+    <button onclick="nextScene()">
+    고블린 습격 ▶
+    </button>
+    
+    </div>
+    
+    </section>
+
+
+    <!-- 장면 4 : 고블린 습격 -->
+
+<section class="scene battle">
+
+    <div class="story-box">
+    
+    <h1>고블린 습격</h1>
+    
+    <p style="text-align:center;">
+    ---------
+    </p>
+    
+    <p style="text-align:center;">
+    (그렇게 고블린 3마리들이 이안 앞으로 나타나는데)
+    </p>
+    
+    <p style="text-align:center;">
+    --------
+    </p>
+    
+    <p><b>주이안 :</b> 저건 또뭐야...</p>
+    
+    <p><b>한재희 :</b> 으에?? 고블린이잖아</p>
+    
+    <p><b>송하림 :</b> 우리끼리저걸 어케 잡아</p>
+    
+    <p><b>주이안 :</b> "파이어볼"</p>
+    
+    <p><b>고블린 :</b> (끄덕없다) 끄아아악 크르릉</p>
+    
+    <p><b>한재희 :</b> 끄악 (공격받고넘어짐) "힐"</p>
+    
+    <br>
+    
+    <p>(그때)</p>
+    
+    <br>
+    
+    <p><b>한백하 :</b> "속박 2단계"</p>
+    
+    <p><b>한설 :</b> "아이스샷"</p>
+    
+    <br>
+    
+    <p>(처리완료)</p>
+    
+    <br>
+    
+    <p><b>한재희 :</b> 어....? 2학년 명찰? (뭐야...2명이서 저리쉽게...?)</p>
+    
+    <p><b>한백하 :</b> 꼬맹이들 안다쳤지?</p>
+    
+    <p><b>한재희 :</b> 네...감사합니다...</p>
+    
+    <p><b>한설 :</b> 고작 고블린 3마리한테 밀린거야? 참나</p>
+    
+    <p><b>한백하 :</b> 야 말을 왜그렇게해 좀 아잇 미안 암튼조심해 (한설을 끌고 사라지며)</p>
+    
+    <p><b>송하림 :</b> 일단 우리 마법학교에 보고하자</p>
+    
+    <p><b>한재희 :</b> 근데 뭐라보고해?</p>
+    
+    <p><b>주이안 :</b> .....몰라</p>
+    
+    <p><b>한재희 :</b> 그럼 일단 선생님한테 가자!!</p>
+    
+    <button onclick="nextScene()">
+    교무실 ▶
+    </button>
+    
+    </div>
+    
+    </section>
+
+<!-- 장면 5 : 마법학교 교무실 -->
+
+<section class="scene office">
+
+    <div class="story-box">
+    
+    <h1>마법학교 교무실</h1>
+    
+    <p style="text-align:center;">
+    ------------
+    </p>
+    
+    <p style="text-align:center;">
+    (마법학교 교무실)
+    </p>
+    
+    <br>
+    
+    <p><b>한재희 :</b> 선생님!</p>
+    
+    <p><b>마르크 :</b> 누구니?</p>
+    
+    <p><b>한재희 :</b> 아 저희는 이번에 1학년 신입생이에요!!</p>
+    
+    <p><b>마르크 :</b> 누구 찾으로 왔니?</p>
+    
+    <p><b>한재희 :</b> 저희 세라 선생님이요..</p>
+    
+    <p><b>마르크 :</b> 조금 기다려 금방오셔 ....근데 무슨일인데?</p>
+    
+    <p><b>한재희 :</b> 아...그게...</p>
+    
+    <p><b>주이안 :</b> 아까 중급마물한테 습격 받았습니다</p>
+    
+    <p><b>송하림 :</b> 다행이 선배들이 도와줘서...</p>
+    
+    <p><b>세라 :</b> 애들아 괜찮니? 아까전 습격으로 다들 다쳤다는데 니들은?</p>
+    
+    <p><b>한재희 :</b> 저흰...(설명중)</p>
+    
+    <p><b>세라 :</b> 이건 누군가 우리 학교 취약점을 뿌린후 들어온 마물같은데..</p>
+    
+    <p><b>세라 :</b> 일단 니들 들어가서 쉬어 오늘은 바로집가고</p>
+    
+    <p><b>한재희 :</b> 네!</p>
+    
+    <br>
+    
+    <p><b>한재희 :</b> 야 주이안</p>
+    
+    <p><b>주이안 :</b> 뭐</p>
+    
+    <p><b>한재희 :</b> 잠시 시간돼...?</p>
+    
+    <p><b>주이안 :</b> 귀찮아</p>
+    
+    <p><b>한재희 :</b> 아앙 제발 진짜 제발</p>
+    
+    <p><b>주이안 :</b> 하.... (귀찮은데 안가면 하루종일 따라오겠지....ㅆ)</p>
+    
+    <p><b>주이안 :</b> 그래...가자 어디갈껀데</p>
+    
+    <p><b>한재희 :</b> 내 자취방</p>
+    
+    <p><b>주이안 :</b> 그래 잠깐만이다...(귀찮)</p>
+    
+    <button onclick="nextScene()">
+    재희 집 ▶
+    </button>
+    
+    </div>
+    
+    </section>
+
+<!-- 장면 6 : 재희 집 -->
+
+<section class="scene room">
+
+    <div class="story-box">
+    
+    <h1>재희의 집</h1>
+    
+    <p style="text-align:center;">
+    ----------------
+    </p>
+    
+    <p style="text-align:center;">
+    (재희의집도착)
+    </p>
+    
+    <p style="text-align:center;">
+    ----------------
+    </p>
+    
+    <br>
+    
+    <p><b>한재희 :</b> 할말있어..</p>
+    
+    <p><b>주이안 :</b> ......(뭐지)</p>
+    
+    <p><b>한재희 :</b> 우리....</p>
+    
+    <br><br><br>
+    
+    <h1>제1장 종료</h1>
+    
+    <p style="text-align:center;">
+    To Be Continued...
+    </p>
+    
+    <br>
+    
+    <div style="text-align:center;">
+    
+    <button onclick="location.href='st2.html'">
+    제2장 보기 ▶
+    </button>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <script>
+    
+    let current = 0;
+    
+    const scenes =
+    document.querySelectorAll(".scene");
+    
+    function nextScene(){
+    
+        scenes[current].classList.remove("active");
+    
+        current++;
+    
+        if(current < scenes.length){
+    
+            scenes[current].classList.add("active");
+    
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+    
+        }
+    
+    }
+    
+    </script>
+    
+    </body>
+    </html>
