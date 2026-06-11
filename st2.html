@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'맑은 고딕', sans-serif;
+    background:#f5f7fa;
+}
+
+/* 장면 */
+
+.scene{
+    display:none;
+    min-height:100vh;
+    padding:40px;
+    animation:fade .5s ease;
+}
+
+.scene.active{
+    display:block;
+}
+
+/* 배경들 */
+
+.room{
+    background:linear-gradient(
+        180deg,
+        #ffd6e7,
+        #ffe7f1,
+        #fff8fc
+    );
+}
+
+.cafe{
+    background:linear-gradient(
+        180deg,
+        #ffe0b2,
+        #fff3e0
+    );
+}
+
+.pcroom{
+    background:linear-gradient(
+        180deg,
+        #d1c4e9,
+        #ede7f6
+    );
+}
+
+.school{
+    background:linear-gradient(
+        180deg,
+        #8fd3ff,
+        #dff4ff
+    );
+}
+
+.training{
+    background:linear-gradient(
+        180deg,
+        #8fd694,
+        #e7ffd9
+    );
+}
+
+/* 스토리창 */
+
+.story-box{
+    max-width:1000px;
+    margin:auto;
+
+    background:rgba(255,255,255,.95);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+/* 제목 */
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+
+h2{
+    text-align:center;
+    margin-top:30px;
+    color:#555;
+}
+
+/* 대사 */
+
+p{
+    line-height:2;
+    margin:12px 0;
+    color:#222;
+    font-size:18px;
+}
+
+b{
+    color:#2d4fff;
+}
+
+/* 버튼 */
+
+button{
+    margin-top:30px;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#5c7cfa;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* 장면 전환선 */
+
+.scene-line{
+    text-align:center;
+    font-weight:bold;
+    margin:25px 0;
+    color:#666;
+}
+
+/* 애니메이션 */
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+    </style>
+</head>
+<body>
+    <section class="scene active room">
+
+        <div class="story-box">
+        
+        <h1>제2장 : 위대한 마법사</h1>
+        
+        <p><b>한재희 :</b> 할말있어..</p>
+        
+        <p><b>주이안 :</b> ......(뭐지)</p>
+        
+        <p><b>한재희 :</b> 우리....</p>
+        
+        <p><b>한재희 :</b> 밥먹자 배고프다 헤헤</p>
+        
+        <p><b>주이안 :</b> 어...? 그래 (뭐야 ㅆㅂ)</p>
+        
+        <p><b>한재희 :</b> 기다령 금방해옴</p>
+        
+        <p><b>주이안 :</b> 그러던지</p>
+        
+        <p><b>한재희 :</b> (요리중)</p>
+        
+        <p><b>한재희 :</b> 완성 먹어 (대충만든 음식)</p>
+        
+        <p><b>주이안 :</b> 나쁘진...않네..</p>
+        
+        <br>
+        
+        <p><b>(잠시뒤)</b></p>
+        
+        <p><b>한재희 :</b> 나 굼굼한거있어</p>
+        
+        <p><b>주이안 :</b> 뭔데?</p>
+        
+        <p><b>한재희 :</b> 너 항상 뭔가 생각이 많아보여 뭔가 있는거 처럼</p>
+        
+        <p><b>주이안 :</b> ............</p>
+        
+        <p><b>한재희 :</b> 뭔데..? 뭐 안좋은일 있어?</p>
+        
+        <p><b>주이안 :</b> 그게 맞어 사실 좀 안좋은 기억있어</p>
+        
+        <p><b>한재희 :</b> 뭔데...?</p>
+        
+        <p><b>주이안 :</b> 그냥 그런게 있어...</p>
+        
+        <p><b>한재희 :</b> 나는...</p>
+        
+        <p><b>주이안 :</b> 안굼굼데...</p>
+        
+        <p><b>한재희 :</b> 그냥 들어!</p>
+        
+        <p><b>한재희 :</b> 난 어릴때 고아였어 듣기로는 버렸다는데 그후 고아원에서 자랐어 혼자 늘 왕따였고 가끔 보건실느낌 마냥 날 써먹기 바빴지 그러던 어느날 귀족이 날 데리고 갔어</p>
+        
+        <p><b>주이안 :</b> 귀족?</p>
+        
+        <p><b>한재희 :</b> 응 귀족 그날이후 뭐 나름 잘살았지</p>
+        
+        <p><b>한재희 :</b> 근데 얼마못가 죽었어 두분다 난 그렇게 돈은많은데...혼자지...지금도...</p>
+        
+        <p><b>주이안 :</b> ...왜이리 밝어?</p>
+        
+        <p><b>한재희 :</b> 어...?</p>
+        
+        <p><b>주이안 :</b> 아픈과거를 가지고 있는데 왜이리 어떡해 밝을수있냐고</p>
+        
+        <p><b>한재희 :</b> 밝은척하는거지...</p>
+        
+        <p><b>주이안 :</b> 왜..?</p>
+        
+        <p><b>한재희 :</b> 그래야 안힘드니까 뭐 사실 가끔 슬프고 힘든데 그래도 뭐 웃으면서 잊는거지</p>
+        
+        <p><b>주이안 :</b> ......그래(뭔가 생각이 많지만 말안하며)</p>
+        
+        <p><b>한재희 :</b> 뭐 그래도 지금은 많이 좋아졌어 ㅎㅎ</p>
+        
+        <p><b>주이안 :</b> ...........</p>
+        
+        <p><b>한재희 :</b> 피곤하다 좀만 쉬자...이안무릎에 베고누움</p>
+        
+        <p><b>주이안 :</b> 뭐하냐....?</p>
+        
+        <p><b>한재희 :</b> 으음으 (잠듬)</p>
+        
+        <p><b>주이안 :</b> ....ㅆㅂ? 이걸어카지....ㅆ</p>
+        
+        <p><b>한재희 :</b> .........으음</p>
+        
+        <p><b>주이안 :</b> (잘자네...)</p>
+        
+        <p><b>주이안 :</b> (재희가편하도록 은근슬적 자세를잡아주며)</p>
+        
+        <p><b>한재희 :</b> 으음 따뜻해애...</p>
+        
+        <p><b>주이안 :</b> (들어올려 침대에 올려두며) 하...미치겠다...</p>
+        
+        <p><b>한재희 :</b> 흐으...냠...</p>
+        
+        <p><b>주이안 :</b> (소파에서 잠들며)</p>
+        
+        <br>
+        
+        <p><b>(다음날)</b></p>
+        
+        <p><b>한재희 :</b> 잘잤당...근데 나 왜 여기있징? 이안이 어디갔지(거실로나오며)</p>
+        
+        <p><b>주이안 :</b> (자는중)</p>
+        
+        <p><b>한재희 :</b> (자고있는 이안의 볼을 쿡쿡 찌르며) ㅎㅎ..</p>
+        
+        <p><b>주이안 :</b> 하지마라 뒤진다....</p>
+        
+        <p><b>한재희 :</b> 일어나아아 밥먹어 빨리 ㅎ</p>
+        
+        <p><b>주이안 :</b> 하....(미친년...)</p>
+        
+        <p><b>한재희 :</b> 헤헤</p>
+        
+        <br>
+        
+        <p><b>(밥먹는중)</b></p>
+        
+        <p><b>한재희 :</b> 우리 오늘 놀러 가자</p>
+        
+        <p><b>주이안 :</b> 귀찮아 별로</p>
+        
+        <p><b>한재희 :</b> 빨리 가자 헿</p>
+        
+        <p><b>(결국....)</b></p>
+        
+        <div class="btn-center">
+        <button onclick="nextScene()">다음</button>
+        </div>
+        
+        </div>
+        
+        </section>
+
+        <section class="scene cafe">
+
+            <div class="story-box">
+            
+            <h1>카페</h1>
+            
+            <p class="scene-line">
+            -----------------------------------------------------------
+            </p>
+            
+            <p class="scene-line">
+            (카폐도착)
+            </p>
+            
+            <p class="scene-line">
+            -----------------------------------------------------------
+            </p>
+            
+            <p><b>한재희 :</b> 분위기 좋다...</p>
+            
+            <p><b>주이안 :</b> 나쁘지 않네...</p>
+            
+            <p><b>한재희 :</b> 나는 저거 먹을래 너는?</p>
+            
+            <p><b>주이안 :</b> 암거나...</p>
+            
+            <p><b>한재희 :</b> --;</p>
+            
+            <br>
+            
+            <p><b>(음료랑 케익먹는중)</b></p>
+            
+            <p><b>한재희 :</b> 맛있겠다아 ㅎ</p>
+            
+            <p><b>주이안 :</b> 좋냐?</p>
+            
+            <p><b>한재희 :</b> 근데 우린 무슨사이야?</p>
+            
+            <p><b>주이안 :</b> .......</p>
+            
+            <p><b>한재희 :</b> 친구맞지?</p>
+            
+            <p><b>주이안 :</b> 그...치?</p>
+            
+            <p><b>한재희 :</b> 그럼 우리 자주노는거다?</p>
+            
+            <p><b>주이안 :</b> 에휴....</p>
+            
+            <p><b>한재희 :</b> 우리 어디갈까?</p>
+            
+            <p><b>주이안 :</b> ......몰라</p>
+            
+            <p><b>한재희 :</b> 음...아니면 피씨방 가보자 나 게임해볼래!</p>
+            
+            <p><b>주이안 :</b> 무슨게임?</p>
+            
+            <p><b>한재희 :</b> 나 뭐있는지 몰루?</p>
+            
+            <p><b>주이안 :</b> 에휴....그래라</p>
+            
+            <div class="btn-center">
+            <button onclick="nextScene()">다음</button>
+            </div>
+            
+            </div>
+            
+            </section>
+            <section class="scene pcroom">
+
+                <div class="story-box">
+                
+                <h1>PC방</h1>
+                
+                <p class="scene-line">
+                ----------------------------------------------
+                </p>
+                
+                <p class="scene-line">
+                (피씨방 도착)
+                </p>
+                
+                <p class="scene-line">
+                ----------------------------------------------
+                </p>
+                
+                <p><b>한재희 :</b> 이게 뭐징?</p>
+                
+                <p><b>주이안 :</b> 줘봐 (세팅중)</p>
+                
+                <p><b>한재희 :</b> 으..응</p>
+                
+                <p><b>주이안 :</b> 에휴....됬다</p>
+                
+                <p><b>한재희 :</b> 우와 이건 뭔게임이야..?</p>
+                
+                <p><b>주이안 :</b> 이터널리턴</p>
+                
+                <p><b>한재희 :</b> 해보자아</p>
+                
+                <p><b>주이안 :</b> 그래...그러던지...</p>
+                
+                <p><b>한재희 :</b> 알려줘어</p>
+                
+                <p><b>주이안 :</b> (대충 알려주는중)</p>
+                
+                <p><b>한재희 :</b> 으에?</p>
+                
+                <p><b>주이안 :</b> 해보자</p>
+                
+                <p><b>한재희 :</b> 으응...(뭐라는거지...?)</p>
+                
+                <br>
+                
+                <p><b>(게임 시작)</b></p>
+                
+                <p><b>주이안 :</b> 그게 아냐 더 들어가야지</p>
+                
+                <p><b>한재희 :</b> 으응 해볼께</p>
+                
+                <br>
+                
+                <p><b>(1시간후)</b></p>
+                
+                <p><b>주이안 :</b> 아래쪽 적있어</p>
+                
+                <p><b>한재희 :</b> 궁쓰고 들어갈께</p>
+                
+                <br>
+                
+                <p><b>(1등)</b></p>
+                
+                <p><b>한재희 :</b> 우와 이겼다아 (버스받음)</p>
+                
+                <p><b>주이안 :</b> 에휴.....(혼자다함)</p>
+                
+                <p><b>한재희 :</b> 슬슬 가자</p>
+                
+                <p><b>주이안 :</b> 그러던지</p>
+                
+                <p><b>한재희 :</b> 빠이 집가서 말해줭</p>
+                
+                <p><b>주이안 :</b> 어...</p>
+                
+                <br>
+                
+                <p><b>(다음날)</b></p>
+                
+                <div class="btn-center">
+                <button onclick="nextScene()">다음</button>
+                </div>
+                
+                </div>
+                
+                </section>
+
+                <section class="scene school">
+
+                    <div class="story-box">
+                    
+                    <h1>학교</h1>
+                    
+                    <p class="scene-line">
+                    ----------------------------------------------------------------
+                    </p>
+                    
+                    <p class="scene-line">
+                    (학교도착)
+                    </p>
+                    
+                    <p class="scene-line">
+                    ----------------------------------------------------------------
+                    </p>
+                    
+                    <p><b>한재희 :</b> 야야야 애드라 나왔어어</p>
+                    
+                    <p><b>주이안 :</b> 에....휴 (또 피곤해지겠네)</p>
+                    
+                    <p><b>베르타 :</b> 안녕 재희야...</p>
+                    
+                    <p><b>송하림 :</b> ......</p>
+                    
+                    <p><b>셀리나 :</b> .......</p>
+                    
+                    <p><b>정시온 :</b> 안녕</p>
+                    
+                    <br>
+                    
+                    <p><b>(그떄)</b></p>
+                    
+                    <p><b>세라 :</b> 다들 앉자 오늘은 2인1조 모의 대결이다 우승한팀은 바다이용권이다</p>
+                    
+                    <p><b>한재희 :</b> 네~! 팀은 어떡해정해여?</p>
+                    
+                    <p><b>세라 :</b> 알아서정해</p>
+                    
+                    <p><b>주이안 :</b> 하....(불길하다 걍 ㅈㄴ 불길하다)</p>
+                    
+                    <p><b>한재희 :</b> 이안아 아 아 같이하자</p>
+                    
+                    <p><b>주이안 :</b> (하...미친년) 그래 하자</p>
+                    
+                    <br>
+                    
+                    <p><b>(이안 / 재희)</b></p>
+                    
+                    <p><b>(베르타 / 델리아)</b></p>
+                    
+                    <p><b>(정시온 / 송하림)</b></p>
+                    
+                    <br>
+                    
+                    <p><b>세라 :</b> 그럼 팀 정해졌다 훈련장으로 이동하자</p>
+                    
+                    <p><b>주이안 :</b> 네...</p>
+                    
+                    <div class="btn-center">
+                    <button onclick="nextScene()">다음</button>
+                    </div>
+                    
+                    </div>
+                    
+                    </section>
+
+                    <section class="scene training">
+
+                        <div class="story-box">
+                        
+                        <h1>훈련장</h1>
+                        
+                        <p class="scene-line">
+                        ------------------------------------------------------
+                        </p>
+                        
+                        <p class="scene-line">
+                        (훈련장 도착)
+                        </p>
+                        
+                        <p class="scene-line">
+                        ------------------------------------------------------
+                        </p>
+                        
+                        <p><b>한재희 :</b> "스피드"</p>
+                        
+                        <p><b>주이안 :</b> "파이어볼"</p>
+                        
+                        <p><b>한재희 :</b> "마나 증가"</p>
+                        
+                        <p><b>주이안 :</b> 일단여기까지 자리잡고 대기하자</p>
+                        
+                        <p><b>한재희 :</b> 으응</p>
+                        
+                        <br>
+                        
+                        <p><b>송하림 :</b> "삼연참"</p>
+                        
+                        <p><b>정시온 :</b> "정찰화살"</p>
+                        
+                        <p><b>정시온 :</b> 우측의 적 발견</p>
+                        
+                        <p><b>송하림 :</b> "베기"</p>
+                        
+                        <p><b>주이안 :</b> "윈드실드"</p>
+                        
+                        <p><b>한재희 :</b> 느려져라 "다운 스피드"</p>
+                        
+                        <p><b>송하림 :</b> 줸장</p>
+                        
+                        <p><b>정시온 :</b> 1단계 "마법화살"</p>
+                        
+                        <br>
+                        
+                        <p><b>(그때!!)</b></p>
+                        
+                        <br>
+                        
+                        <p style="font-size:24px; text-align:center;">
+                        <b>한재희 : !!!!</b>
+                        </p>
+                        
+                        <br><br>
+                        
+                        <h2>제2장 종료</h2>
+                        
+                        <p style="text-align:center;">
+                        To Be Continued...
+                        </p>
+                        
+                        <div class="btn-center">
+                        
+                        <button onclick="location.href='chapter3.html'">
+                        다음
+                        </button>
+                        
+                        </div>
+                        
+                        </div>
+                        
+                        </section>
+
+</body>
+<script>
+
+    let current = 0;
+    
+    const scenes =
+    document.querySelectorAll(".scene");
+    
+    function nextScene(){
+    
+        scenes[current].classList.remove("active");
+    
+        current++;
+    
+        if(current < scenes.length){
+    
+            scenes[current].classList.add("active");
+    
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+    
+        }
+    
+    }
+    
+    </script>
+</html>
